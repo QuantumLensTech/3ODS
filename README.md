@@ -157,7 +157,7 @@ This creates a **natural geometric interface** for 3-qubit quantum systems, part
 
 ### ❌ Not Yet Implemented
 
-- Layers 0-2 (in progress Q1 2025)
+- Layers 0-2 (in progress Q1 2026)
 - OctoEngine graphics subsystem
 - OctoBASE database
 - Native hardware support
