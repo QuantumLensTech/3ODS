@@ -317,6 +317,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 |----------|-------------|
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Complete 8-layer specification |
 | [FOUNDATIONS.md](docs/FOUNDATIONS.md) | Mathematical foundations, proofs |
+| [FRACTALITE_EUCLIDIENNE.md](docs/FRACTALITE_EUCLIDIENNE.md) | |
 | [TOPOLOGICAL_COMPUTING.md](docs/TOPOLOGICAL_COMPUTING.md) | Quantum computing connection |
 | [MANIFESTE_nODS.md](docs/MANIFESTE_nODS.md) | Vision & philosophical foundation |
 | [QUICKSTART.md](docs/QUICKSTART.md) | Developer setup guide |
