@@ -381,18 +381,19 @@ if __name__ == "__main__":
     
     # Create octants
     print("\n1. Creating octants:")
-    o0 = Octant(0)  # (---)
-    o7 = Octant(7)  # (+++)
+    o0 = Octant(0, position=(-0.5, -0.5, -0.5), size=1.0)  # (---)
+    o7 = Octant(7, position=(+0.5, +0.5, +0.5), size=1.0)  # (+++)
     print(f"  {o0}")
     print(f"  {o7}")
     
     # Distance calculations
     print("\n2. Distance calculations:")
-    o1 = Octant(1)  # (+--)
+    o1 = Octant(1, position=(+0.5, -0.5, -0.5), size=1.0)  # Edge from o0
     print(f"  Distance O0 → O1 (edge): {o0.distance_to(o1):.3f} (expect 1.0)")
-    o3 = Octant(3)  # (++-)
+    o3 = Octant(3, position=(+0.5, +0.5, -0.5), size=1.0)  # Face diagonal
     print(f"  Distance O0 → O3 (face): {o0.distance_to(o3):.3f} (expect √2 ≈ 1.414)")
-    print(f"  Distance O0 → O7 (space): {o0.distance_to(o7):.3f} (expect √3 ≈ 1.732)")
+    o7_positioned = Octant(7, position=(+0.5, +0.5, +0.5), size=1.0)  # Space diagonal
+    print(f"  Distance O0 → O7 (space): {o0.distance_to(o7_positioned):.3f} (expect √3 ≈ 1.732)")
     
     # Hamming distances
     print("\n3. Hamming distances:")
@@ -410,7 +411,10 @@ if __name__ == "__main__":
     
     # Verify geometric property: √(Hamming) = distance for unit octants
     print("\n5. Verifying geometric invariant:")
-    unit_octants = [Octant(i, position=OCTANT_SIGNS[i], size=2.0) for i in range(8)]
+    unit_octants = [
+        Octant(i, position=tuple(s * 0.5 for s in OCTANT_SIGNS[i]), size=1.0) 
+        for i in range(8)
+    ]
     for i in range(8):
         for j in range(i+1, 8):
             hamming = unit_octants[i].hamming_distance(unit_octants[j])
