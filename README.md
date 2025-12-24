@@ -83,6 +83,12 @@ States 2-7 are NEW (geometric/topological)
 
 ---
 
+## Fondations set-théoriques de 3ODS
+
+3ODS repose explicitement sur la théorie des ensembles (ZF) appliquée à la computation multi-espaces d'états.Soit [E_n = \{s_0, s_1, \dots, s_{n-1}\}] l'ensemble des états d'un système [n]-valent, avec [E_2 \subset E_8] le sous-espace binaire naturel de l'espace octovalent principal �.Les opérations computationnelles forment un monoïde [M_n = (E_n, \oplus_n, \otimes_n, \dots) : E_n^k \to E_n], où le binaire s'exécute nativement par restriction [M_2 \subset M_8] sans conversion ni perte d'information �.Cette inclusion d'ensembles préserve les propriétés algébriques : idempotence, associativité, distributivité transitent naturellement des espaces riches vers les sous-espaces, unifiant binaire et post-binaire sous un cadre set-théorique cohérent �.Cette fondation permet une généralisation immédiate à tout [E_n] (ternaire, quaternaires, etc.) tout en restant compatible C++20 via templates métaprogrammés �.
+
+---
+
 ## 🌌 What is 3ODS?
 
 3ODS is a **complete computational architecture** using **8 spatial octants** and **12 temporal phases** as fundamental primitives — structures that emerge naturally from 3D Euclidean geometry.
